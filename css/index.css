@@ -1,0 +1,121 @@
+body {
+  background-color: #212121;
+  font-family: 'Roboto', sans-serif;
+}
+
+div.main-container {
+  background-color: #fffbf5;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 3vh 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.main-container>aside {
+  flex-basis: 15%;
+}
+
+div.main-container>aside>figure.user {
+  background: linear-gradient(180deg, #D3CDC4 0%, rgba(235, 229, 219, 0.43) 100%);
+  border-radius: 0px 30px 30px 0px;
+  min-height: 35vh;
+  padding: 0 2vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div.main-container>aside>figure.user>img {
+  border-radius: 20px;
+  height: auto;
+  margin: 0 auto;
+}
+
+div.main-container>aside>figure.user>figure-caption>h3.greeting {
+  margin-bottom: 3vh;
+  font-size: 1rem;
+  text-align: center;
+}
+
+div.main-container>aside>figure.user>figure-caption>h1.user-name {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+div.main-container>aside>nav.menu>ul {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 3vh 0;
+}
+
+div.main-container>aside>nav.menu>ul>li>a {
+  text-decoration: none;
+  color: black;
+}
+
+div.main-container>aside>figure.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 12vh;
+
+  text-align: center;
+}
+
+div.main-container>aside>figure.logo>img {
+  order: 1;
+}
+
+div.header-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 80%;
+}
+
+div.header-main > header {
+  display: flex;
+}
+
+div.header-main>header>h1 {
+  flex-grow: 1;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+div.header-main>header>nav.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+div.header-main>header>nav.menu>input {
+  border-radius: 15px;
+  border: 0;
+  min-width: 25vw;
+  background-image: url("../img/folder-saved-search-symbolic.svg");
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 95%;
+  opacity: 60%;
+}
+
+div.header-main>header>nav.menu>ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+}
+
+div.header-main>header>nav.menu>ul>li>a {
+  text-decoration: none;
+}
