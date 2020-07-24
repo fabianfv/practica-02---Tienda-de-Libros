@@ -1,27 +1,45 @@
 body {
   background-color: #212121;
   font-family: 'Roboto', sans-serif;
+
+  --general-border-radius: 2vw;
+  --title-1: calc(1rem + 0.8vw);
+  --title-2: calc(0.8rem + 0.7vw);
+  --title-3: calc(0.8rem + 0.5vw);
+  --menu-item: calc(0.8rem + 0.4vw);
+  --book-title: calc(0.8rem + 0.4vw);
+  --book-author: calc(0.6rem + 0.3vw);
 }
 
 div.main-container {
   background-color: #fffbf5;
-  max-width: 1500px;
+  max-width: 1698px;
+  min-height: 1024px;
   margin: 0 auto;
-  padding: 3vh 0;
+  padding: 6vw 0;
 
   display: flex;
   flex-direction: row;
+
+}
+
+/****************************
+* div.main-container > aside
+*****************************/
+
+aside {
+  flex-basis: 20%;
+  margin-right: 4vw;
+
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-div.main-container>aside {
-  flex-basis: 15%;
-}
-
-div.main-container>aside>figure.user {
+figure.user {
   background: linear-gradient(180deg, #D3CDC4 0%, rgba(235, 229, 219, 0.43) 100%);
-  border-radius: 0px 30px 30px 0px;
-  min-height: 35vh;
+  border-radius: 0px var(--general-border-radius) var(--general-border-radius) 0px;
+  min-height: 40vh;
   padding: 0 2vw;
 
   display: flex;
@@ -30,24 +48,25 @@ div.main-container>aside>figure.user {
   align-items: center;
 }
 
-div.main-container>aside>figure.user>img {
-  border-radius: 20px;
+figure.user>img {
+  border-radius: 1.5vw;
   height: auto;
   margin: 0 auto;
 }
 
-div.main-container>aside>figure.user>figure-caption>h3.greeting {
+figure.user>figure-caption>h3.greeting {
   margin-bottom: 3vh;
-  font-size: 1rem;
+  font-size: var(--title-3);
   text-align: center;
 }
 
-div.main-container>aside>figure.user>figure-caption>h1.user-name {
-  font-size: 1.5rem;
+figure.user>figure-caption>h1.user-name {
+  font-size: var(--title-1);
   text-align: center;
+  font-weight: bold;
 }
 
-div.main-container>aside>nav.menu>ul {
+nav.aside-menu>ul {
   min-height: 35vh;
   display: flex;
   flex-direction: column;
@@ -56,12 +75,13 @@ div.main-container>aside>nav.menu>ul {
   padding: 3vh 0;
 }
 
-div.main-container>aside>nav.menu>ul>li>a {
+nav.aside-menu>ul>li>a {
   text-decoration: none;
-  color: black;
+  color: #0084fff8;
+  font-size: var(--menu-item);
 }
 
-div.main-container>aside>figure.logo {
+figure.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,51 +91,355 @@ div.main-container>aside>figure.logo {
   text-align: center;
 }
 
-div.main-container>aside>figure.logo>img {
+figure.logo>img {
   order: 1;
 }
 
-div.header-main {
+figure.logo>figure-caption>h3.FSF {
+  font-size: var(--menu-item);
+}
+
+/**********************************
+* Contenedor del header y del main
+***********************************/
+
+div.central-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-basis: 80%;
 }
 
-div.header-main > header {
+/************************
+* div.central-container>header
+*************************/
+
+header {
   display: flex;
+  margin-bottom: 10vh;
 }
 
-div.header-main>header>h1 {
+header>h1 {
   flex-grow: 1;
-  font-size: 1.75rem;
+  font-size: var(--title-1);
   font-weight: bold;
 }
 
-div.header-main>header>nav.menu {
+header>nav.menu {
   display: flex;
-  justify-content: space-between;
   flex-grow: 1;
 }
 
-div.header-main>header>nav.menu>input {
-  border-radius: 15px;
+header>nav.menu>input {
+  border-radius: 1.5vw;
   border: 0;
   min-width: 25vw;
+
   background-image: url("../img/folder-saved-search-symbolic.svg");
   background-repeat: no-repeat;
-  background-size: 1.5rem;
   background-position: 95%;
-  opacity: 60%;
+  background-size: 1.3vw;
+  background-color: white;
+  opacity: 50%;
+
+  padding: 1vw 1.5vw;
+
+  font-size: var(--menu-item);
 }
 
-div.header-main>header>nav.menu>ul {
+header>nav.menu>ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
 }
 
-div.header-main>header>nav.menu>ul>li>a {
+header>nav.menu>ul>li>a {
   text-decoration: none;
+  color: #0084fff8;
+  font-size: var(--menu-item);
+}
+
+/**************************************
+* General border radius for book cover
+***************************************/
+
+img.book-cover {
+  border-radius: var(--general-border-radius);
+}
+
+/******************************
+* main>section.suggested-books
+*******************************/
+
+.suggested-books {
+  margin-bottom: 10vh;
+}
+
+.suggested-books>h1 {
+  font-size: var(--title-2);
+}
+
+.suggested-books>div.figure-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8vh;
+}
+
+.suggested-books>div.figure-container>figure.gradient-book {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background: linear-gradient(270deg, #4F2601 0%, #3D1D00 0%, rgba(211, 143, 100, 0.92) 40%, rgba(89, 44, 2, 0.58) 100%);
+  border-radius: var(--general-border-radius);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-left: 1vw;
+  padding-right: 3vw;
+
+  margin-right: 2vw;
+
+  min-width: 33%;
+}
+
+.suggested-books>div.figure-container>figure.gradient-book>img.book-cover {
+  position: relative;
+  top: -1.5vw;
+  margin-left: 1vh;
+  margin-right: 2vw;
+  height: 110%;
+  width: 110%;
+  max-width: 35%;
+}
+
+.suggested-books>div.figure-container>figure.gradient-book>figure-caption {
+  color: white;
+}
+
+.suggested-books>div.figure-container>figure.gradient-book>figure-caption>h1.title {
+  font-size: var(--book-title);
+  font-weight: 500;
+}
+
+.suggested-books>div.figure-container>figure.gradient-book>figure-caption>h3.author {
+  font-size: var(--book-author);
+  font-weight: 500;
+
+}
+
+/************************
+* main>section.new-books
+*************************/
+
+.new-books>h1 {
+  font-size: var(--title-2);
+  font-weight: bold;
+}
+
+.new-books>div.figure-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 3vh;
+}
+
+.new-books>div.figure-container>figure.standalone-book {
+  flex-basis: 12%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.new-books>div.figure-container>figure.standalone-book>figure-caption {
+  padding: 0.8vw;
+}
+
+.new-books>div.figure-container>figure.standalone-book>figure-caption>h1.title {
+  font-size: var(--book-title);
+  font-weight: bolder;
+  margin-bottom: 0.5vw;
+}
+
+.new-books>div.figure-container>figure.standalone-book>figure-caption>h3.author {
+  font-size: var(--book-author);
+}
+
+.new-books>div.figure-container>figure.standalone-book>figure-caption>div.tags {
+  display: flex;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+}
+
+.new-books>div.figure-container>figure.standalone-book>figure-caption>div.tags>h3 {
+  font-size: var(--book-author);
+  border-radius: 1.2vw;
+
+  background-color: #E5E5E5;
+  text-align: center;
+  padding: 0.3vw 1vw;
+
+  margin-top: 0.5vw;
+  margin-right: 1vw;
+
+}
+
+/****************************************************
+* .new-books>div.figure-container>div.famous-authors
+*****************************************************/
+
+div.famous-authors {
+  background-color: #F3F3F3;
+  border-radius: var(--general-border-radius) 0 0 var(--general-border-radius);
+  padding: 1.5vw 0;
+  padding-left: 1.5vw;
+  padding-right: 0.5vw;
+
+  flex-basis: 22%;
+}
+
+div.famous-authors>h1 {
+  font-size: var(--title-3);
+  font-weight: bold;
+}
+
+div.famous-authors>div.authors-container {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+div.famous-authors>div.authors-container>figure.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* No uso "justify-content: space-between" para separar la img de un autor de su caption, porque ello hace que el
+     espacio de separación dependa de la longitud del caption. El uso de un margin-right para la foto
+     hará que el espacio de separación no tenga esa dependencia.
+  */
+}
+
+div.famous-authors>div.authors-container>figure.author>img {
+  /*
+  No uso flex-basis para establecer el tamaño de la imagen porque hace que sea dependiente de la longitud
+  de su caption flex-basis: 40%;
+  */
+  max-width: 28%;
+  margin-right: 1vw;
+}
+
+div.famous-authors>div.authors-container>figure.author>div.author-description>h1.author-name {
+  font-size: var(--book-title);
+}
+
+div.famous-authors>div.authors-container>figure.author>div.author-description>h3.published-books {
+  font-size: var(--book-author);
+}
+
+
+@media(max-width: 900px) {
+
+  div.main-container {
+    flex-direction: column;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside {
+    margin-right: 0;
+  }
+
+  aside>figure.user {
+    border-radius: 0;
+    min-height: 35vw;
+    flex-basis: 20vw;
+    padding: 2vw 0;
+  }
+
+  aside>figure.user>img {
+    min-width: 15vw;
+  }
+
+  aside>figure.user>figure-caption {
+    margin: 0;
+    padding: 0;
+  }
+  aside>figure.user>figure-caption>h3.greeting {
+    margin: 0;
+  }
+
+  aside>nav.aside-menu>ul{
+    flex-direction: row;
+    min-height: 0;
+  }
+
+  aside>figure.logo{
+    min-height: 0;
+  }
+
+  div.main-container>div.central-container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  header>h1{
+    text-align: center;
+  }
+
+  header>nav.menu {
+    margin-top: 3vw;
+  }
+
+  .suggested-books>div.figure-container {
+    flex-direction: column;
+  }
+
+  .suggested-books>div.figure-container>figure.gradient-book {
+    margin-bottom: 5vw;
+    margin-right: 0;
+  }
+
+  .suggested-books>div.figure-container>figure.gradient-book>figure-caption>h1.title {
+    font-size: 4vw;
+  }
+
+  .suggested-books>div.figure-container>figure.gradient-book>figure-caption>h3.author {
+    font-size: 2.5vw;
+  }
+
+  main>section.new-books>div.figure-container {
+    flex-wrap: wrap;
+  }
+
+  .new-books>div.figure-container>figure.standalone-book{
+    margin-bottom: 3vw;
+    flex-basis: 30%;
+  }
+
+  figure.standalone-book>img{
+    max-width: 50%;
+  }
+
+  .new-books>div.figure-container>div.famous-authors {
+    flex-basis: 100%;
+    min-height: 20vh;
+  }
+  div.famous-authors{
+      border-radius: var(--general-border-radius);
+      text-align: center;
+  }
+
+  div.famous-authors>div.authors-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  div.famous-authors>div.authors-container>figure.author>img {
+    max-width: 30%;
+  }
+
 }

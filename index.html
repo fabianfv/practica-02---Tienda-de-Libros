@@ -20,7 +20,7 @@
           <h1 class="user-name">Sarah</h1>
         </figure-caption>
       </figure>
-      <nav class="menu">
+      <nav class="aside-menu">
         <ul>
           <li><a href="#">My Board</a></li>
           <li><a href="#">Collections</a></li>
@@ -32,11 +32,11 @@
       <figure class="logo">
         <img src="img/FSF-Logo.svg" alt="FSF logo">
         <figure-caption>
-          <h3>A service from</h3>
+          <h3 class="FSF">A service from</h3>
         </figure-caption>
       </figure>
     </aside>
-    <div class="header-main">
+    <div class="central-container">
       <header>
         <h1>FSF Bookstore</h1>
         <nav class="menu">
@@ -49,97 +49,112 @@
       </header>
       <main>
         <section class="suggested-books">
-          <figure class="gradient-book">
-            <img src="" alt="" class="book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-            </figure-caption>
-          </figure>
-          <figure class="gradient-book">
-            <img src="" alt="" class="book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-            </figure-caption>
-          </figure>
-          <figure class="gradient-book">
-            <img src="" alt="" class="gradient-book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-            </figure-caption>
-          </figure>
+          <h1>Suggested books</h1>
+          <div class="figure-container">
+            <figure class="gradient-book">
+              <img src="img/170 x 220 - Free Software, Free Society.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">Free Software, Free Society</h1>
+                <h3 class="author">Richard M. Stallman - 345 pages</h3>
+              </figure-caption>
+            </figure>
+            <figure class="gradient-book">
+              <img src="img/170 x 220 - Free as in Freedom.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">Free as in Freedom</h1>
+                <h3 class="author">Richard M. Stallman - 345 pages</h3>
+              </figure-caption>
+            </figure>
+            <figure class="gradient-book">
+              <img src="img/170 x 220 - You don't know javascript.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">You don't know Javascript</h1>
+                <h3 class="author">Kyle Simpson - 345 pages</h3>
+              </figure-caption>
+            </figure>
+          </div>
         </section>
         <section class="new-books">
-          <figure class="standalone-book">
-            <img src="" alt="" class="standalone-book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-              <div class="tags">
-                <h3>Tag</h3>
+          <h1>New books</h1>
+          <div class="figure-container">
+            <figure class="standalone-book">
+              <img src="img/170 x 220 - Building-React-Apps-with-Server-Side-Rendering.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">Building React Apps with Server-Side Rendering</h1>
+                <h3 class="author">Mohit Takkar</h3>
+                <div class="tags">
+                  <h3>ReactJS</h3>
+                </div>
+              </figure-caption>
+            </figure>
+            <figure class="standalone-book">
+              <img src="img/170 x 220 - Introducing-the-HTML5-Web-Speech-API.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">Introducing the HTML5 Web Speech API</h1>
+                <h3 class="author">Alex Libby</h3>
+                <div class="tags">
+                  <h3>HTML5</h3>
+                </div>
+              </figure-caption>
+            </figure>
+            <figure class="standalone-book">
+              <img src="img/170 x 220 - Beginning-Git-and-GitHub.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">Beggining Git and GitHub</h1>
+                <h3 class="author">Mariot Tsioara</h3>
+                <div class="tags">
+                  <h3>Git</h3>
+                  <h3>GitHub</h3>
+                </div>
+              </figure-caption>
+            </figure>
+            <figure class="standalone-book">
+              <img src="img/170 x 220 - You don't know javascript.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">You don't Know Javascript</h1>
+                <h3 class="author">Kyle Simpson</h3>
+                <div class="tags">
+                  <h3>Javascript</h3>
+                </div>
+              </figure-caption>
+            </figure>
+            <figure class="standalone-book">
+              <img src="img/170  x 220 - Building-Progressive-Web-Applications-with-Vuejs.jpg" alt="" class="book-cover">
+              <figure-caption>
+                <h1 class="title">Building Progressive Web Applications with Vue.js</h1>
+                <h3 class="author">Carlos Rojas</h3>
+                <div class="tags">
+                  <h3>Vue.js</h3>
+                </div>
+              </figure-caption>
+            </figure>
+            <div class="famous-authors">
+              <h1>Famous Authors</h1>
+              <div class="authors-container">
+                <figure class="author">
+                  <img src="img/person02.png" alt="">
+                  <div class="author-description">
+                    <h1 class="author-name">Rebecca Thursday</h1>
+                    <h3 class="published-books">10 books</h3>
+                  </div>
+                </figure>
+                <figure class="author">
+                  <img src="img/person01.png" alt="">
+                  <div class="author-description">
+                    <h1 class="author-name">Barbara Friday</h1>
+                    <h3 class="published-books">61 novels</h3>
+                  </div>
+                </figure>
+                <figure class="author">
+                  <img src="img/person03.png" alt="">
+                  <div class="author-description">
+                    <h1 class="author-name">Josh Saturday</h1>
+                    <h3 class="published-books">179 books</h3>
+                  </div>
+                </figure>
               </div>
-            </figure-caption>
-          </figure>
-          <figure class="standalone-book">
-            <img src="" alt="" class="standalone-book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-              <div class="tags">
-                <h3>Tag</h3>
-              </div>
-            </figure-caption>
-          </figure>
-          <figure class="standalone-book">
-            <img src="" alt="" class="standalone-book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-              <div class="tags">
-                <h3>Tag</h3>
-              </div>
-            </figure-caption>
-          </figure>
-          <figure class="standalone-book">
-            <img src="" alt="" class="standalone-book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-              <div class="tags">
-                <h3>Tag</h3>
-              </div>
-            </figure-caption>
-          </figure>
-          <figure class="standalone-book">
-            <img src="" alt="" class="standalone-book-cover">
-            <figure-caption>
-              <h1 class="title"></h1>
-              <h3 class="author"></h3>
-              <div class="tags">
-                <h3>Tag</h3>
-              </div>
-            </figure-caption>
-          </figure>
-        </section>
-        <section class="famous-authors">
-          <h1>Famous Authors</h1>
-          <figure class="author">
-            <img src="" alt="">
-            <h1 class="author-name">author-name</h1>
-            <h3 class="published-books">nn books</h3>
-          </figure>
-          <figure class="author">
-            <img src="" alt="">
-            <h1 class="author-name">author-name</h1>
-            <h3 class="published-books">nn books</h3>
-          </figure>
-          <figure class="author">
-            <img src="" alt="">
-            <h1 class="author-name">author-name</h1>
-            <h3 class="published-books">nn books</h3>
-          </figure>
+            </div>
+          </div>
         </section>
       </main>
     </div>
